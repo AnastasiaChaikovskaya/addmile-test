@@ -1,0 +1,61 @@
+@import '../../styles/mixsins.scss';
+@import '../../styles/vars.scss';
+
+.money-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  width: 100%;
+  border: 1px solid #d0d0d8;
+  border-radius: 20px;
+  position: relative;
+
+  @include on-desktop {
+    width: 240px;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 41px;
+    height: 1px;
+    background-color: #d0d0d8;
+  }
+
+  &::after {
+    right: -41px;
+  }
+
+  &::before {
+    left: -41px;
+  }
+
+  &-active {
+    border-color: #ff8b37;
+
+    &::after,
+    &::before {
+      background-color: #ff8b37;
+    }
+  }
+}
+
+.money-text {
+  font-size: $phone-font-size;
+  color: #1c1c21;
+
+  @include on-desktop {
+    font-size: $desktop-font-size;
+  }
+
+  &-active {
+    color: #ff8b37;
+  }
+
+  &-disable {
+    color: #d0d0d8;
+  }
+}

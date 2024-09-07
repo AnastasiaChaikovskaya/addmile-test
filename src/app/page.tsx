@@ -1,9 +1,7 @@
-import React from 'react'
+import WelcomeContainer from '@/modules/WelcomeContainer/WelcomeContainer';
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+  return <WelcomeContainer />;
+};
 
-export default page
+export default page;

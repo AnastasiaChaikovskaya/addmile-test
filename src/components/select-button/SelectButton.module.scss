@@ -1,0 +1,107 @@
+@import '../../styles/mixsins.scss';
+@import '../../styles/vars.scss';
+
+@import '../../styles/mixsins.scss';
+@import '../../styles/vars.scss';
+
+.select {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 24px 20px;
+  border: 1px solid #d0d0d8;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 17px;
+    height: 1px;
+    background-color: #d0d0d8;
+  }
+
+  &::after {
+    right: -17px;
+  }
+
+  &::before {
+    left: -17px;
+  }
+
+  &:hover {
+    border-color: #ff8b37;
+
+    &::after,
+    &::before {
+      background-color: #ff8b37;
+    }
+  }
+
+  @include on-desktop {
+    padding: 24px 32px;
+    width: 405px;
+  }
+
+  &-wrapper {
+    position: absolute;
+    clip-path: inherit;
+    width: 100%;
+    height: 100%;
+    background-color: #d0d0d8;
+    z-index: 0;
+  }
+
+  &-label {
+    color: #ff9900;
+    font-size: $phone-font-size;
+    font-weight: bold;
+
+    @include on-desktop {
+      font-size: $desktop-font-size;
+    }
+  }
+
+  &-text {
+    font-size: $phone-font-size;
+    color: #1c1c21;
+
+    @include on-desktop {
+      font-size: $desktop-font-size;
+    }
+  }
+
+  &-correct {
+    border-color: #47d867;
+    background-color: #e6faea;
+
+    &::after,
+    &::before {
+      background-color: #47d867;
+    }
+  }
+
+  &-selected {
+    border-color: #ff8b37;
+    background-color: #fff3eb;
+
+    &::after,
+    &::before {
+      background-color: #ff8b37;
+    }
+  }
+
+  &-wrong {
+    border-color: #ec6259;
+    background-color: #fdeeed;
+
+    &::after,
+    &::before {
+      background-color: #ec6259;
+    }
+  }
+}

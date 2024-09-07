@@ -1,0 +1,46 @@
+@import '../../styles/mixsins.scss';
+@import '../../styles//vars.scss';
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ff8b37;
+  align-items: center;
+  color: #ffff;
+  font-weight: 600;
+  font-size: $phone-font-size;
+  border-radius: 10px;
+  line-height: 16.24px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+
+  @include on-desktop {
+    width: 296px;
+  }
+
+  &:hover {
+    background-color: #ffac70;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    background-color: #e87928;
+  }
+
+  @include on-desktop {
+    font-size: $desktop-font-size;
+  }
+
+  &--default {
+    padding: 16px 24px;
+
+    @include on-desktop {
+      padding: 20px 24px;
+    }
+  }
+}

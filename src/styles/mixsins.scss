@@ -1,0 +1,39 @@
+@import './vars.scss';
+
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-phone {
+  @media (min-width: $phone-min-width) {
+    @content;
+  }
+}
+
+// @mixin content-pudding-inline {
+//   display: flex;
+//   padding-inline: 16px;
+//   flex-direction: column;
+//   width: 100%;
+
+//   @include on-tablet {
+//     padding-inline: 24px;
+//     max-width: 1400px;
+//   }
+
+//   @include on-desktop {
+//     margin-inline: auto;
+//   }
+// }
+
+// .container {
+//   @include content-pudding-inline;
+// }
