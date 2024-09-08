@@ -1,0 +1,42 @@
+@import '../../styles/mixsins.scss';
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  padding-bottom: 24px;
+
+  @include on-desktop {
+    height: 100vh;
+    padding-inline: 80px;
+    padding-block: 120px;
+  }
+
+  &__question {
+    font-size: 18px;
+    color: #1c1c21;
+    line-height: 20.88px;
+    text-align: center;
+    font-weight: 600;
+
+    @include on-desktop {
+      text-align: left;
+      font-size: 2.15rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 32px;
+      max-width: 1000px;
+      flex-wrap: wrap;
+    }
+  }
+}

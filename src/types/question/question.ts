@@ -1,4 +1,5 @@
 export interface IAnswers {
+  label: string;
   text: string;
   correct: boolean;
 }

@@ -44,16 +44,7 @@
 
   @include on-desktop {
     padding: 24px 32px;
-    width: 405px;
-  }
-
-  &-wrapper {
-    position: absolute;
-    clip-path: inherit;
-    width: 100%;
-    height: 100%;
-    background-color: #d0d0d8;
-    z-index: 0;
+    width: 24rem;
   }
 
   &-label {

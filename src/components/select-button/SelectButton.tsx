@@ -26,28 +26,15 @@ const SelectText = React.forwardRef<HTMLSpanElement, ISelectText>(({ className, 
 });
 
 interface ISelectButton extends React.HTMLAttributes<HTMLDivElement> {
-  selected?: boolean;
-  correct?: boolean;
-  wrong?: boolean;
   children?: ReactNode;
 }
 
-const SelectButton = React.forwardRef<HTMLDivElement, ISelectButton>(
-  ({ children, className, selected = false, correct = false, wrong = false, ...props }, ref) => {
-    return (
-      <div
-        className={clsx(
-          style.select,
-          { [style['select-correct']]: correct, [style['select-selected']]: selected, [style['select-wrong']]: wrong },
-          className,
-        )}
-        {...props}
-        ref={ref}
-      >
-        {children}
-      </div>
-    );
-  },
-);
+const SelectButton = React.forwardRef<HTMLDivElement, ISelectButton>(({ children, className, ...props }, ref) => {
+  return (
+    <div className={clsx(style.select, className)} {...props} ref={ref}>
+      {children}
+    </div>
+  );
+});
 
 export { SelectButton, SelectLabel, SelectText };

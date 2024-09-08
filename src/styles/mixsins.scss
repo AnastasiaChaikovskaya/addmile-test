@@ -18,6 +18,12 @@
   }
 }
 
+@mixin on-large {
+  @media (max-width: $large-display) {
+    @content;
+  }
+}
+
 // @mixin content-pudding-inline {
 //   display: flex;
 //   padding-inline: 16px;

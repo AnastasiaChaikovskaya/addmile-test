@@ -4,18 +4,22 @@
     "question": "What is the capital of France?",
     "answers": [
       {
+        "label": "A",
         "text": "Paris",
         "correct": true
       },
       {
+        "label": "B",
         "text": "London",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Berlin",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Madrid",
         "correct": false
       }
@@ -26,18 +30,22 @@
     "question": "Which planet is known as the Red Planet?",
     "answers": [
       {
+        "label": "A",
         "text": "Mars",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Venus",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Jupiter",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Saturn",
         "correct": false
       }
@@ -48,18 +56,22 @@
     "question": "Who wrote 'To Kill a Mockingbird'?",
     "answers": [
       {
+        "label": "A",
         "text": "Harper Lee",
         "correct": true
       },
       {
+        "label": "B",
         "text": "F. Scott Fitzgerald",
         "correct": false
       },
       {
+        "label": "C",
         "text": "George Orwell",
         "correct": false
       },
       {
+        "label": "D",
         "text": "J.K. Rowling",
         "correct": false
       }
@@ -70,18 +82,22 @@
     "question": "What is the chemical symbol for water?",
     "answers": [
       {
+        "label": "A",
         "text": "H2O",
         "correct": true
       },
       {
+        "label": "B",
         "text": "O2",
         "correct": false
       },
       {
+        "label": "C",
         "text": "CO2",
         "correct": false
       },
       {
+        "label": "D",
         "text": "NaCl",
         "correct": false
       }
@@ -92,18 +108,22 @@
     "question": "Who painted the Mona Lisa?",
     "answers": [
       {
+        "label": "A",
         "text": "Leonardo da Vinci",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Pablo Picasso",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Vincent van Gogh",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Claude Monet",
         "correct": false
       }
@@ -114,18 +134,22 @@
     "question": "Which element has the atomic number 1?",
     "answers": [
       {
+        "label": "A",
         "text": "Hydrogen",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Oxygen",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Carbon",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Nitrogen",
         "correct": false
       }
@@ -136,18 +160,22 @@
     "question": "What is the largest ocean on Earth?",
     "answers": [
       {
+        "label": "A",
         "text": "Pacific Ocean",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Atlantic Ocean",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Indian Ocean",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Arctic Ocean",
         "correct": false
       }
@@ -158,18 +186,22 @@
     "question": "Which language is the most spoken worldwide?",
     "answers": [
       {
+        "label": "A",
         "text": "Mandarin Chinese",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Spanish",
         "correct": false
       },
       {
+        "label": "C",
         "text": "English",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Hindi",
         "correct": false
       }
@@ -180,18 +212,22 @@
     "question": "Who discovered penicillin?",
     "answers": [
       {
+        "label": "A",
         "text": "Alexander Fleming",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Marie Curie",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Isaac Newton",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Albert Einstein",
         "correct": false
       }
@@ -202,18 +238,22 @@
     "question": "Which year did the Titanic sink?",
     "answers": [
       {
+        "label": "A",
         "text": "1912",
         "correct": true
       },
       {
+        "label": "B",
         "text": "1905",
         "correct": false
       },
       {
+        "label": "C",
         "text": "1915",
         "correct": false
       },
       {
+        "label": "D",
         "text": "1920",
         "correct": false
       }
@@ -224,18 +264,22 @@
     "question": "What is the smallest prime number?",
     "answers": [
       {
+        "label": "A",
         "text": "2",
         "correct": true
       },
       {
+        "label": "B",
         "text": "1",
         "correct": false
       },
       {
+        "label": "C",
         "text": "3",
         "correct": false
       },
       {
+        "label": "D",
         "text": "5",
         "correct": false
       }
@@ -246,18 +290,22 @@
     "question": "Which planet is closest to the Sun?",
     "answers": [
       {
+        "label": "A",
         "text": "Mercury",
         "correct": true
       },
       {
+        "label": "B",
         "text": "Venus",
         "correct": false
       },
       {
+        "label": "C",
         "text": "Earth",
         "correct": false
       },
       {
+        "label": "D",
         "text": "Mars",
         "correct": false
       }
