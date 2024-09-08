@@ -6,7 +6,7 @@
       {
         "label": "A",
         "text": "Paris",
-        "correct": true
+        "correct": false
       },
       {
         "label": "B",
@@ -15,8 +15,8 @@
       },
       {
         "label": "C",
-        "text": "Berlin",
-        "correct": false
+        "text": "Paris",
+        "correct": true
       },
       {
         "label": "D",
@@ -31,13 +31,13 @@
     "answers": [
       {
         "label": "A",
-        "text": "Mars",
-        "correct": true
+        "text": "Venus",
+        "correct": false
       },
       {
         "label": "B",
-        "text": "Venus",
-        "correct": false
+        "text": "Mars",
+        "correct": true
       },
       {
         "label": "C",
@@ -83,23 +83,23 @@
     "answers": [
       {
         "label": "A",
-        "text": "H2O",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "O2",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "CO2",
         "correct": false
       },
       {
-        "label": "D",
+        "label": "C",
         "text": "NaCl",
         "correct": false
+      },
+      {
+        "label": "D",
+        "text": "H2O",
+        "correct": true
       }
     ]
   },
@@ -135,18 +135,18 @@
     "answers": [
       {
         "label": "A",
-        "text": "Hydrogen",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Oxygen",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "Carbon",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Hydrogen",
+        "correct": true
       },
       {
         "label": "D",
@@ -161,18 +161,18 @@
     "answers": [
       {
         "label": "A",
-        "text": "Pacific Ocean",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Atlantic Ocean",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "Indian Ocean",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Pacific Ocean",
+        "correct": true
       },
       {
         "label": "D",
@@ -187,18 +187,18 @@
     "answers": [
       {
         "label": "A",
-        "text": "Mandarin Chinese",
-        "correct": true
-      },
-      {
-        "label": "B",
         "text": "Spanish",
         "correct": false
       },
       {
-        "label": "C",
+        "label": "B",
         "text": "English",
         "correct": false
+      },
+      {
+        "label": "C",
+        "text": "Mandarin Chinese",
+        "correct": true
       },
       {
         "label": "D",
@@ -239,13 +239,13 @@
     "answers": [
       {
         "label": "A",
-        "text": "1912",
-        "correct": true
+        "text": "1905",
+        "correct": false
       },
       {
         "label": "B",
-        "text": "1905",
-        "correct": false
+        "text": "1912",
+        "correct": true
       },
       {
         "label": "C",

@@ -4,6 +4,7 @@ import money from '../../../public/data/money.json';
 import MoneyStep from '@/components/step/MoneyStep';
 import Image from 'next/image';
 import CloseIcon from '@/assets/icons/close-icon.svg';
+import { useGameStore } from '@/store/GameStore';
 
 interface IMobileAside {
   isOpenMenu: boolean;
@@ -11,6 +12,7 @@ interface IMobileAside {
 }
 
 const MobileAside: FC<IMobileAside> = ({ isOpenMenu, setIsOpenMenu }) => {
+  const questionNumber = useGameStore((state) => state.questionNumber);
   return (
     <div
       className={styles.menu}
@@ -21,7 +23,12 @@ const MobileAside: FC<IMobileAside> = ({ isOpenMenu, setIsOpenMenu }) => {
       </header>
       <div className={styles.steps}>
         {money.map((item) => (
-          <MoneyStep key={item.id} money={item} />
+          <MoneyStep
+            key={item.id}
+            money={item}
+            active={questionNumber === +item.id}
+            disable={+item.id < questionNumber}
+          />
         ))}
       </div>
     </div>
