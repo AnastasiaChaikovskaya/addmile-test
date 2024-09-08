@@ -1,12 +1,14 @@
 'use client';
 
+import Image from 'next/image';
+import React, { useEffect } from 'react';
+
 import { Button } from '@/components/button/Button';
 import styles from '@/modules/FinishPage/FinishPage.module.scss';
 import hand from '@/assets/elements/hand.svg';
-import Image from 'next/image';
-import React, { useEffect } from 'react';
-import money from '../../../public/data/money.json';
 import { useGameStore } from '@/store/GameStore';
+
+import money from '../../../public/data/money.json';
 
 const FinishPage = () => {
   const { earned, setFinish, setStart, resetQuestionNumber, questionNumber, setEarned } = useGameStore(

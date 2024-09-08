@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
-import styles from '@/modules/MobileAside/MobileAside.module.scss';
-import money from '../../../public/data/money.json';
-import MoneyStep from '@/components/step/MoneyStep';
 import Image from 'next/image';
+
+import MoneyStep from '@/components/step/MoneyStep';
+import styles from '@/modules/MobileAside/MobileAside.module.scss';
 import CloseIcon from '@/assets/icons/close-icon.svg';
 import { useGameStore } from '@/store/GameStore';
+
+import money from '../../../public/data/money.json';
 
 interface IMobileAside {
   isOpenMenu: boolean;

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC, SVGAttributes, useMemo } from 'react';
+
 import { TIconName } from './types';
 import { IconConfig } from './config';
 

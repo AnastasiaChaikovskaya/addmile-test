@@ -1,16 +1,17 @@
 'use client';
 
-import React, { Dispatch, FC, SetStateAction, useCallback, useEffect, useState } from 'react';
-import GameBoard from '../GameBoard/GameBoard';
-import { IQuestion } from '@/types/question';
+import React, { useCallback, useEffect, useState } from 'react';
+import Image from 'next/image';
+
 import styles from '@/modules/GameContainer/GameContainer.module.scss';
 import MenuIcon from '@/assets/icons/menu-icon.svg';
-import Image from 'next/image';
+import MoneyStep from '@/components/step/MoneyStep';
+import { useGameStore } from '@/store/GameStore';
+
+import GameBoard from '../GameBoard/GameBoard';
 import MobileAside from '../MobileAside/MobileAside';
 import money from '../../../public/data/money.json';
-import MoneyStep from '@/components/step/MoneyStep';
 import data from '../../../public/data/data.json';
-import { useGameStore } from '@/store/GameStore';
 
 const GameContainer = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);

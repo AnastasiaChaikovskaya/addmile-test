@@ -1,12 +1,14 @@
 'use client';
 
-import React, { Dispatch, FC, SetStateAction, useState } from 'react';
+import React, { useState } from 'react';
+
 import styles from '@/modules/GameBoard/GameBoard.module.scss';
-import selectButtonStyles from '../../components/select-button/SelectButton.module.scss';
 import { IAnswers } from '@/types/question';
 import { SelectButton, SelectLabel, SelectText } from '@/components/select-button/SelectButton';
 import { delay } from '@/helpers/delay';
 import { useGameStore } from '@/store/GameStore';
+
+import selectButtonStyles from '../../components/select-button/SelectButton.module.scss';
 
 const GameBoard = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<IAnswers | null>(null);

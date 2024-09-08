@@ -1,6 +1,6 @@
-import { IMoney } from '@/types/money';
-import { IQuestion } from '@/types/question';
 import { create } from 'zustand';
+
+import { IQuestion } from '@/types/question';
 
 interface IGameState {
   isStarted: boolean;

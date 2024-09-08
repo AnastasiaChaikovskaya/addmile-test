@@ -1,6 +1,7 @@
-import { IMoney } from '@/types/money';
 import clsx from 'clsx';
 import React, { FC } from 'react';
+
+import { IMoney } from '@/types/money';
 import styles from '@/components/step/Step.module.scss';
 
 interface IMoneyStep {
