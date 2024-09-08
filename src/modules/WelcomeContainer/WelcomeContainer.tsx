@@ -7,7 +7,7 @@ import hand from '@/assets/elements/hand.svg';
 import rectangle from '@/assets/elements/rectangle-mobl.jpg';
 import { Button } from '@/components/button/Button';
 import styles from '@/modules/WelcomeContainer/WelcomeContainer.module.scss';
-import { useGameStore } from '@/store/GameStore';
+import { useGameStore } from '@/store/useGameStore';
 
 const WelcomeContainer = () => {
   const { setStart } = useGameStore((state) => state);
@@ -15,8 +15,6 @@ const WelcomeContainer = () => {
   const handleStartGame = () => {
     setStart(true);
   };
-
-  console.log('hi');
 
   return (
     <div className={styles.main}>

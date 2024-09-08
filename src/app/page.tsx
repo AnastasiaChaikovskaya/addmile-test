@@ -3,9 +3,9 @@
 import FinishPage from '@/modules/FinishPage/FinishPage';
 import GameContainer from '@/modules/GameContainer/GameContainer';
 import WelcomeContainer from '@/modules/WelcomeContainer/WelcomeContainer';
-import { useGameStore } from '@/store/GameStore';
+import { useGameStore } from '@/store/useGameStore';
 
-const page = () => {
+const MainPage = () => {
   const { isStarted, isFinished } = useGameStore((state) => state);
 
   const isGameStart = isStarted && !isFinished;
@@ -19,4 +19,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MainPage;

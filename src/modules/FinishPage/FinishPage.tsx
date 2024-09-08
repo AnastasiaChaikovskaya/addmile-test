@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/button/Button';
 import styles from '@/modules/FinishPage/FinishPage.module.scss';
 import hand from '@/assets/elements/hand.svg';
-import { useGameStore } from '@/store/GameStore';
+import { useGameStore } from '@/store/useGameStore';
 
 import money from '../../../public/data/money.json';
 
@@ -19,7 +19,7 @@ const FinishPage = () => {
     if (questionNumber > 1) {
       setEarned(money[questionNumber - 2].amount);
     }
-  }, [questionNumber]);
+  }, [questionNumber, setEarned]);
 
   const handleTryAgain = () => {
     setFinish(false);

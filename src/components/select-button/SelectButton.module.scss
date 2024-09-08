@@ -66,16 +66,6 @@
     }
   }
 
-  &-correct {
-    border-color: #47d867;
-    background-color: #e6faea;
-
-    &::after,
-    &::before {
-      background-color: #47d867;
-    }
-  }
-
   &-selected {
     border-color: #ff8b37;
     background-color: #fff3eb;
@@ -83,6 +73,16 @@
     &::after,
     &::before {
       background-color: #ff8b37;
+    }
+  }
+
+  &-correct {
+    border-color: #47d867;
+    background-color: #e6faea;
+
+    &::after,
+    &::before {
+      background-color: #47d867;
     }
   }
 

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from '@/modules/GameContainer/GameContainer.module.scss';
 import MenuIcon from '@/assets/icons/menu-icon.svg';
 import MoneyStep from '@/components/step/MoneyStep';
-import { useGameStore } from '@/store/GameStore';
+import { useGameStore } from '@/store/useGameStore';
 
 import GameBoard from '../GameBoard/GameBoard';
 import MobileAside from '../MobileAside/MobileAside';
@@ -23,7 +23,7 @@ const GameContainer = () => {
 
   useEffect(() => {
     setCurrentQuestion(data[questionNumber - 1]);
-  }, [data, questionNumber]);
+  }, [questionNumber, setCurrentQuestion]);
 
   if (questionNumber > data.length) {
     setFinish(true);

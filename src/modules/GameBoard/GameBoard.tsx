@@ -5,29 +5,37 @@ import React, { useState } from 'react';
 import styles from '@/modules/GameBoard/GameBoard.module.scss';
 import { IAnswers } from '@/types/question';
 import { SelectButton, SelectLabel, SelectText } from '@/components/select-button/SelectButton';
-import { delay } from '@/helpers/delay';
-import { useGameStore } from '@/store/GameStore';
-
-import selectButtonStyles from '../../components/select-button/SelectButton.module.scss';
+import { useGameStore } from '@/store/useGameStore';
+import { useLazyTimeout } from '@/hooks/useLazyTimeout';
 
 const GameBoard = () => {
-  const [selectedAnswer, setSelectedAnswer] = useState<IAnswers | null>(null);
-  const [className, setClassName] = useState('');
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [isInCorrect, setIsInCorrect] = useState(false);
   const { setQuestionNumber, setFinish, currentQuestion } = useGameStore((state) => state);
+  const { timeout } = useLazyTimeout(2000);
+  const { timeout: nextQuestionTimeout } = useLazyTimeout(1000);
+
+  const resetAnswers = () => {
+    setSelectedAnswer('');
+    setIsCorrect(false);
+    setIsInCorrect(false);
+  };
 
   const handleSelectAnswer = (answer: IAnswers) => {
-    setClassName('select-selected');
-    setSelectedAnswer(answer);
+    setSelectedAnswer(answer.text);
 
-    delay(2000, () => {
-      setClassName(answer.correct ? 'select-correct' : 'select-wrong');
-    });
+    timeout(() => {
+      if (answer.correct) {
+        setIsCorrect(true);
+      } else setIsInCorrect(true);
 
-    delay(4000, () => {
-      {
-        answer.correct ? setQuestionNumber() : setFinish(true);
-        setSelectedAnswer(null);
-      }
+      nextQuestionTimeout(() => {
+        if (answer.correct) {
+          setQuestionNumber();
+          resetAnswers();
+        } else setFinish(true);
+      });
     });
   };
 
@@ -36,16 +44,21 @@ const GameBoard = () => {
       <div className={styles.board}>
         <h2 className={styles['board__question']}>{currentQuestion.question}</h2>
         <div className={styles['board__answers']}>
-          {currentQuestion.answers.map((answer) => (
-            <SelectButton
-              key={answer.label}
-              onClick={() => handleSelectAnswer(answer)}
-              className={selectedAnswer?.text === answer.text ? selectButtonStyles[className] : undefined}
-            >
-              <SelectLabel>{answer.label}</SelectLabel>
-              <SelectText>{answer.text}</SelectText>
-            </SelectButton>
-          ))}
+          {currentQuestion.answers.map((answer) => {
+            const isButtonSelected = selectedAnswer === answer.text;
+            return (
+              <SelectButton
+                key={answer.label}
+                onClick={() => handleSelectAnswer(answer)}
+                isSelected={isButtonSelected}
+                isCorrect={isButtonSelected && isCorrect}
+                isInCorrect={isButtonSelected && isInCorrect}
+              >
+                <SelectLabel>{answer.label}</SelectLabel>
+                <SelectText>{answer.text}</SelectText>
+              </SelectButton>
+            );
+          })}
         </div>
       </div>
     );

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import MoneyStep from '@/components/step/MoneyStep';
 import styles from '@/modules/MobileAside/MobileAside.module.scss';
 import CloseIcon from '@/assets/icons/close-icon.svg';
-import { useGameStore } from '@/store/GameStore';
+import { useGameStore } from '@/store/useGameStore';
 
 import money from '../../../public/data/money.json';
 

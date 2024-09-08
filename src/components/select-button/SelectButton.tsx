@@ -14,6 +14,9 @@ const SelectLabel = React.forwardRef<HTMLSpanElement, ISelectLabel>(({ className
     </span>
   );
 });
+
+SelectLabel.displayName = 'SelectLabel';
+
 interface ISelectText extends React.HTMLAttributes<HTMLSpanElement> {
   children?: React.ReactNode;
 }
@@ -26,16 +29,37 @@ const SelectText = React.forwardRef<HTMLSpanElement, ISelectText>(({ className, 
   );
 });
 
+SelectText.displayName = 'SelectText';
+
 interface ISelectButton extends React.HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
+  isSelected?: boolean;
+  isCorrect?: boolean;
+  isInCorrect?: boolean;
 }
 
-const SelectButton = React.forwardRef<HTMLDivElement, ISelectButton>(({ children, className, ...props }, ref) => {
-  return (
-    <div className={clsx(style.select, className)} {...props} ref={ref}>
-      {children}
-    </div>
-  );
-});
+const SelectButton = React.forwardRef<HTMLDivElement, ISelectButton>(
+  ({ children, className, isSelected, isCorrect, isInCorrect, ...props }, ref) => {
+    return (
+      <div
+        className={clsx(
+          style.select,
+          {
+            [style['select-correct']]: isCorrect,
+            [style['select-selected']]: isSelected,
+            [style['select-wrong']]: isInCorrect,
+          },
+          className,
+        )}
+        {...props}
+        ref={ref}
+      >
+        {children}
+      </div>
+    );
+  },
+);
+
+SelectButton.displayName = 'SelectButton';
 
 export { SelectButton, SelectLabel, SelectText };
